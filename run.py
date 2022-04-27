@@ -34,3 +34,22 @@ def random_num(board):
     return randint(0, len(board) - 1)
 
 
+def generate_ships_coord(board):
+    """
+    Generating 4 ships to be on the board.
+    The while loop ensures all 4 are generated.
+    Generating random co-ordinates the computer places a 
+    "o", then simply countsd how many are on the board.
+    The while loop finshes when the count is at 4.
+    Argument: list
+    """
+    ship_amount = 0
+    while ship_amount < 4:
+        ship_amount = 0
+        ship_col = random_num(board)
+        ship_row = random_num(board)
+        board[ship_row][ship_col] = " o "
+        # Every list in the board we look for a " o " and keep running
+        for row in board:
+            ship_amount += row.count(" o ")
+
