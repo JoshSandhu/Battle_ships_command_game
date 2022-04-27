@@ -16,3 +16,12 @@ def gen_board(board):
     return board
 
 
+def print_board(board):
+    """
+    Prints the board list of X,
+    Removing the lists formatting with spaces
+    Argument: List
+    """
+    for ind in board:
+        print(" ".join(ind))
+
