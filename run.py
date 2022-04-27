@@ -53,3 +53,17 @@ def generate_ships_coord(board):
         for row in board:
             ship_amount += row.count(" o ")
 
+
+def welcome():
+    """
+    Welcome message for the game which also 
+    has an input for the player to submit their name
+    """
+    print('Welcome! Here you will find a command line version of the classic Battleships')
+    name = input("Please enter your name followed by the enter button: \n")
+    print(f'\n Hi there {name}! The system will auto generate the loactions for your battleships.'
+            'There will be 4 Battleships to find within the computers board')
+    print('\n X are marked as empty locations, * are missed shots and the # are hits'
+            'Be aware that the grid is 5 spaces wide and they use integers between 1 and 5')
+
+
