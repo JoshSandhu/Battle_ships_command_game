@@ -38,7 +38,7 @@ def generate_ships_coord(board):
     """
     Generating 4 ships to be on the board.
     The while loop ensures all 4 are generated.
-    Generating random co-ordinates the computer places a 
+    Generating random co-ordinates the computer places a
     "o", then simply countsd how many are on the board.
     The while loop finshes when the count is at 4.
     Argument: list
@@ -116,7 +116,7 @@ def user_shot():
             print("Unfortunatly you have already chosen that spot, try again!")
         else:
             repeat = False
-    
+
     # Now we check whether its a hit or not.
     if computer[guess_col][guess_row] == " o ":
         user_guess[guess_col][guess_row] = " # "
@@ -155,11 +155,30 @@ def comp_shot():
 
 def game_start():
     """
-    This is the main game loop. We start by filling the boards and 
-    displaying the welcome message and user name input. In the while loop we 
+    This is the main game loop. We start by filling the boards and
+    displaying the welcome message and user name input. In the while loop we
     will limit the total amount of turns for the game. We display
     which turn it is currently, run the user guess, print the computer
     guess. Then we check the status of winners during each turn. If
     there is a winner then we exit the loop and run the final function.
     """
-    
+    generate_boards()
+    welcome()
+    i = 0
+    while i < 10:
+        print(f"You are currently on turn {i + 1}/10 \n")
+        user_shot()
+        print_board(user_guess)
+        input("\nPress Enter to continue . .")
+        comp_shot()
+        print("\nThis is your board: ")
+        print_board(user)
+        input("\nPress enter to continue . .")
+        i += 1
+        if check_result(user) == 4:
+            i = 10
+        elif check_result(user_guess) == 4:
+            i = 10
+    check_result_final()
+
+
