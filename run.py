@@ -1,7 +1,7 @@
 from random import randint
 
 user = []
-user_guesses = []
+user_guess = []
 computer = []
 
 
@@ -76,10 +76,10 @@ def generate_boards():
     A comp board is the same for the computer.
     This will also hide the comp ships from user.
     """
-    make_board(user)
-    make_board(comp)
-    make_board(user_guess)
+    gen_board(user)
+    gen_board(computer)
+    gen_board(user_guess)
     generate_ships_coord(user)
-    generate_ships_coord(comp)
+    generate_ships_coord(computer)
 
 
