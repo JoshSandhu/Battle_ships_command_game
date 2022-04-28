@@ -210,3 +210,20 @@ def check_result(board):
     return total
 
 
+def check_result_final():
+    """
+    Final result check to see if game loop should exit
+    and then reports the result to the user.
+    """
+    user_result = check_result(user_guess)
+    comp_result = check_result(user)
+    if user_result > comp_result:
+        print("Yesss, congratulations!! You have WON the game!")
+    elif user_result < comp_result:
+        print("Ohhh No! Unfortunatly the computer has beaten you.")
+    else:
+        print("The game has ended in a tie. Try again.")
+
+
+# Call the main game function
+game_start()
