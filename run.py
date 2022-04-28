@@ -118,9 +118,28 @@ def user_shot():
             repeat = False
     
     # Now we check whether its a hit or not.
-    if comp[guess_col][guess_row] == " o ":
+    if computer[guess_col][guess_row] == " o ":
         user_guess[guess_col][guess_row] = " # "
         print("\nBOOOOM!! You have hit the computers ship!")
     else:
         user_guess[guess_col][guess_row] = " * "
         print("\nAhhh you missed this turn. Try again next time :")
+
+
+def comp_shot():
+    """
+    Now we do the same as above for the computers shot
+    """
+    print("\nNow it is the computers shot.")
+    repeat = True
+    # Random number generation
+    guess_col = random_num(computer)
+    guess_row = random_num(computer)
+    # Check if the spot has been chosen
+    while repeat:
+        if (user[guess_col][guess_row] == " * " or 
+                user[guess_col][guess_row] == " # "):
+            guess_col = random_num(computer)
+            guess_row = random_num(computer)
+        else:
+            repeat = False
