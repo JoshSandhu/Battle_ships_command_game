@@ -83,3 +83,31 @@ def generate_boards():
     generate_ships_coord(computer)
 
 
+def user_shot():
+    """
+    This is to receive the users turn.
+    We will then confirm the data is valid.
+    After confirming a hit or miss we print
+    the result of the turn.
+    """
+    print("Computer's board:")
+    print_board(user_guess)
+    repeat = True
+    while reapeat:
+        while True:
+            print("\nPlease choose a column for your shot.")
+            guess_col = input("Enter a number (1-5) then press Enter: \n")
+            if validate_data(guess_col):
+                break
+        while True:
+            print("\nPlease choose a row for your shot.")
+            guess_row = input("Enter a number (1-5) then press Enter: \n")
+            if validate_data(guess_row):
+                break
+        # This is used to validate the input of the choices.
+
+        # Now we minus 1 from the users input.
+        guess_col = int(guess_col) - 1
+        guess_row = int(guess_row) - 1
+
+        
