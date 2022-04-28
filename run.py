@@ -94,6 +94,7 @@ def user_shot():
     print_board(user_guess)
     repeat = True
     while reapeat:
+        # This is used to validate the input of the choices.
         while True:
             print("\nPlease choose a column for your shot.")
             guess_col = input("Enter a number (1-5) then press Enter: \n")
@@ -104,10 +105,14 @@ def user_shot():
             guess_row = input("Enter a number (1-5) then press Enter: \n")
             if validate_data(guess_row):
                 break
-        # This is used to validate the input of the choices.
 
         # Now we minus 1 from the users input.
         guess_col = int(guess_col) - 1
         guess_row = int(guess_row) - 1
 
-        
+        # Here we choose a response if the spot has already been chosen.
+        if (user_guess[guess_col][guess_row] == " * " or
+                user_guess[guess_col][guess_row] == " # "):
+            print("Unfortunatly you have already chosen that spot, try again!")
+        else:
+            repeat = False
