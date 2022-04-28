@@ -48,10 +48,10 @@ def generate_ships_coord(board):
         ship_amount = 0
         ship_col = random_num(board)
         ship_row = random_num(board)
-        board[ship_row][ship_col] = " o "
+        board[ship_row][ship_col] = "o"
         # Every list in the board we look for a " o " and keep running
         for row in board:
-            ship_amount += row.count(" o ")
+            ship_amount += row.count("o")
 
 
 def welcome():
@@ -61,11 +61,11 @@ def welcome():
     """
     print('Welcome to a command line of the classic Battleships')
     name = input("Please enter your name followed by the enter button: \n")
-    print(f'\n2Hi there {name}!'
-          'The system will generate the loactions for your ships.'
+    print(f'\nHi there {name}! '
+          'The system will generate the loactions for your ships. '
           'There will be 4 Battleships to find within the computers board')
     print('\nX are marked as empty locations,'
-          ' * are missed shots and the # are hits'
+          ' * are missed shots and the # are hits. '
           'The grid is 5 spaces and they use integers between 1 and 5')
 
 
@@ -153,7 +153,7 @@ def comp_shot():
         print("The computer has missed!!")
 
 
-def game_start():
+def game_start(name):
     """
     This is the main game loop. We start by filling the boards and
     displaying the welcome message and user name input. In the while loop we
@@ -171,7 +171,7 @@ def game_start():
         print_board(user_guess)
         input("\nPress Enter to continue . .")
         comp_shot()
-        print("\nThis is your board: ")
+        print("\n{name} board: ")
         print_board(user)
         input("\nPress enter to continue . .")
         i += 1
