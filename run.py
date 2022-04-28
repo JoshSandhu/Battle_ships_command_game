@@ -152,3 +152,14 @@ def comp_shot():
         user[guess_col][guess_row] = " * "
         print("The computer has missed!!")
 
+
+def game_start():
+    """
+    This is the main game loop. We start by filling the boards and 
+    displaying the welcome message and user name input. In the while loop we 
+    will limit the total amount of turns for the game. We display
+    which turn it is currently, run the user guess, print the computer
+    guess. Then we check the status of winners during each turn. If
+    there is a winner then we exit the loop and run the final function.
+    """
+    
