@@ -69,3 +69,17 @@ def welcome():
           'The grid is 5 spaces and they use integers between 1 and 5')
 
 
+def generate_boards():
+    """
+    This function will create all the boards needed.
+    A user's board which will hide all the users ships.
+    A comp board is the same for the computer.
+    This will also hide the comp ships from user.
+    """
+    make_board(user)
+    make_board(comp)
+    make_board(user_guess)
+    generate_ships_coord(user)
+    generate_ships_coord(comp)
+
+
