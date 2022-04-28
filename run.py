@@ -61,10 +61,10 @@ def welcome():
     """
     print('Welcome to a command line of the classic Battleships')
     name = input("Please enter your name followed by the enter button: \n")
-    print(f'\n Hi there {name}!'
+    print(f'\n2Hi there {name}!'
           'The system will generate the loactions for your ships.'
           'There will be 4 Battleships to find within the computers board')
-    print('\n X are marked as empty locations,'
+    print('\nX are marked as empty locations,'
           ' * are missed shots and the # are hits'
           'The grid is 5 spaces and they use integers between 1 and 5')
 
@@ -111,18 +111,18 @@ def user_shot():
         guess_row = int(guess_row) - 1
 
         # Here we choose a response if the spot has already been chosen.
-        if (user_guess[guess_col][guess_row] == " * " or
-                user_guess[guess_col][guess_row] == " # "):
+        if (user_guess[guess_col][guess_row] == "*" or
+                user_guess[guess_col][guess_row] == "#"):
             print("Unfortunatly you have already chosen that spot, try again!")
         else:
             repeat = False
 
     # Now we check whether its a hit or not.
-    if computer[guess_col][guess_row] == " o ":
-        user_guess[guess_col][guess_row] = " # "
+    if computer[guess_col][guess_row] == "o":
+        user_guess[guess_col][guess_row] = "#"
         print("\nBOOOOM!! You have hit the computers ship!")
     else:
-        user_guess[guess_col][guess_row] = " * "
+        user_guess[guess_col][guess_row] = "*"
         print("\nAhhh you missed this turn. Try again next time :")
 
 
@@ -137,19 +137,19 @@ def comp_shot():
     guess_row = random_num(computer)
     # Check if the spot has been chosen
     while repeat:
-        if (user[guess_col][guess_row] == " * " or
-                user[guess_col][guess_row] == " # "):
+        if (user[guess_col][guess_row] == "*" or
+                user[guess_col][guess_row] == "#"):
             guess_col = random_num(computer)
             guess_row = random_num(computer)
         else:
             repeat = False
     # Show the user the computers move.
     print(f"The computer has chosen {guess_col + 1}, {guess_row + 1}")
-    if user[guess_col][guess_row] == " o ":
-        user[guess_col][guess_row] = " # "
+    if user[guess_col][guess_row] == "o":
+        user[guess_col][guess_row] = "#"
         print("Ahhh that is a direct hit!")
     else:
-        user[guess_col][guess_row] = " * "
+        user[guess_col][guess_row] = "*"
         print("The computer has missed!!")
 
 
@@ -206,7 +206,7 @@ def check_result(board):
     """
     total = 0
     for list in board:
-        total += list.count(" # ")
+        total += list.count("#")
     return total
 
 
