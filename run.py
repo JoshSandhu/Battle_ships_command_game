@@ -171,7 +171,7 @@ def game_start():
         print_board(user_guess)
         input("\nPress Enter to continue . .")
         comp_shot()
-        print("\n{name} board: ")
+        print("\nThis is your board: ")
         print_board(user)
         input("\nPress enter to continue . .")
         i += 1
