@@ -182,3 +182,20 @@ def game_start():
     check_result_final()
 
 
+def validate_data(value):
+    """
+    This function would be used to validate the users input for shot
+    Argument: user input
+    """
+    try:
+        if int(value) > 5 or int(value) < 1:
+            raise ValueError(
+                "Your shot is out of bounds. Select a number between 1 and 5."
+            )
+    except ValueError as e:
+        print(f"Invalid data input: {e}, please try again.")
+        print("Enter a number between 1 and 5.")
+        return False
+    return True
+
+
