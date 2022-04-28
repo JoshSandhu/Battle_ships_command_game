@@ -199,3 +199,14 @@ def validate_data(value):
     return True
 
 
+def check_result(board):
+    """
+    Search and calculate the number of hit ships on the board.
+    Argument: List (Players board)
+    """
+    total = 0
+    for list in board:
+        total += list.count(" # ")
+    return total
+
+
