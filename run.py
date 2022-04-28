@@ -153,7 +153,7 @@ def comp_shot():
         print("The computer has missed!!")
 
 
-def game_start(name):
+def game_start():
     """
     This is the main game loop. We start by filling the boards and
     displaying the welcome message and user name input. In the while loop we
