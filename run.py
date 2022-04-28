@@ -116,3 +116,11 @@ def user_shot():
             print("Unfortunatly you have already chosen that spot, try again!")
         else:
             repeat = False
+    
+    # Now we check whether its a hit or not.
+    if comp[guess_col][guess_row] == " o ":
+        user_guess[guess_col][guess_row] = " # "
+        print("\nBOOOOM!! You have hit the computers ship!")
+    else:
+        user_guess[guess_col][guess_row] = " * "
+        print("\nAhhh you missed this turn. Try again next time :")
