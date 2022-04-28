@@ -137,9 +137,18 @@ def comp_shot():
     guess_row = random_num(computer)
     # Check if the spot has been chosen
     while repeat:
-        if (user[guess_col][guess_row] == " * " or 
+        if (user[guess_col][guess_row] == " * " or
                 user[guess_col][guess_row] == " # "):
             guess_col = random_num(computer)
             guess_row = random_num(computer)
         else:
             repeat = False
+    # Show the user the computers move.
+    print(f"The computer has chosen {guess_col + 1}, {guess_row + 1}")
+    if user[guess_col][guess_row] == " o ":
+        user[guess_col][guess_row] = " # "
+        print("Ahhh that is a direct hit!")
+    else:
+        user[guess_col][guess_row] = " * "
+        print("The computer has missed!!")
+
