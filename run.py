@@ -93,7 +93,7 @@ def user_shot():
     print("Computer's board:")
     print_board(user_guess)
     repeat = True
-    while reapeat:
+    while repeat:
         # This is used to validate the input of the choices.
         while True:
             print("\nPlease choose a column for your shot.")
