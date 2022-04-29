@@ -110,3 +110,4 @@ This Battleship game was deployed using Code Institute's mock terminal for Herok
 * Code Institute for the deployment terminal.
 * Wikipedia for the battleship game information.
 * Python Docs for references to the needed functions and actions.
+* Python online chatrooms with other programers discussing code. - 5 different sources with regards to the following sections: game_start()and generate_boards().
