@@ -27,7 +27,7 @@ The boards of each player have a key:
 
 ![The Heroku app terminal for the battleship commandline game](assets/images/battleship-commandline-terminal.png)
 
-## Existing Features
+### Existing Features
 
 * User input to start the game allows for a user to enter their name or username to be referred to.
 
@@ -69,3 +69,44 @@ The boards of each player have a key:
 
 ## Testing
 
+Manually testing this project by doing the following actions:
+
+* Passsed the Python code through a PEP8 linter and confirmed there is no issues.
+* Given invalid inputs: strings when numbers are expected, out of bounds and already chosen inputs.
+Tested in my local terminal and the Heroku terminal.
+
+### Bugs
+
+#### Solved Bugs
+
+* After initial testing, I noticed an error when selecting a Column and Row. This was due to order which calls the data when deciding placement on board.
+
+* When first deploying to Heroku I also noticed the final result function was not initiating. This was fixed by ensuring the fuction is called only after the correct amouunt of games.
+
+* When deploying on Heroku there was issues in connecting via GitHub application. This was fixed by connecting the repository via Heroku CLI.
+
+#### Remaining Bugs
+
+* No known bugs found with further testing.
+
+### Validator Testing
+
+* PEP8 - No errors were returned from PEP8online.com
+
+## Deployment
+
+This Battleship game was deployed using Code Institute's mock terminal for Heroku. Find my live site [here.](https://battleship-commandline.herokuapp.com/)
+
+* Steps used for the deployment:
+    * Login to Heroku and on account settings and 'reveal' your API key.
+    * Run heroku login -i via the terminal on GitPod.
+    * Login with email address and API as password.
+    * Get app name by typing 'heroku apps' in the terminal.
+    * Set the Heroku remote with 'heroku git:remote -a (app _name)
+    * Then add, commit and push to GitHub and Heroku.
+
+## Credits
+
+* Code Institute for the deployment terminal.
+* Wikipedia for the battleship game information.
+* Python Docs for references to the needed functions and actions.
