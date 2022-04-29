@@ -26,3 +26,7 @@ The boards of each player have a key:
 ## Features
 
 ![The Heroku app terminal for the battleship commandline game](assets/images/battleship-commandline-terminal.png)
+
+## Existing Features
+
+* 
