@@ -17,3 +17,12 @@ In this version the rules are as follows:
 * Each players ships are placed randomly via the computer.
 * The first player (user or computer) to either sink all of the others ships or hit the most ships at the end of 10 turns.
 
+The boards of each player have a key:
+* The X is a unguessed section.
+* The o is the locations of the players ships.
+* The # is a guess that has hit a ship.
+* The * is a guess which has missed.
+
+## Features
+
+![The Heroku app terminal for the battleship commandline game](assets/images/battleship-commandline-terminal.png)
