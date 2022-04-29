@@ -55,3 +55,17 @@ The boards of each player have a key:
 
 ![The final game message which announces the winner or tie game.](assets/images/final-result.png)
 
+* Error checking
+    * There is a guess validation step to ensure no guess is outside of the board.
+    * The validator also checks if the guess has been used previously
+    * This also ensures no other value other than required is used.
+
+### Future Features
+
+* Allow modification of board size.
+* Allow different sized ships or difficulty level.
+* Have the user the ability to modify the location of their ships.
+* Potentially add a second player option rather than against computer.
+
+## Testing
+
