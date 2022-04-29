@@ -50,3 +50,8 @@ The boards of each player have a key:
 * Computer makes a random choice and then tells you both the choice and the results.
 
 ![After the players guess we then get the result which is reflexted on board. The computer then goes.](assets/images/results-computershot.png)
+
+* At the end of the game. Either 10 rounds or first to destroy the others 4 ships, the game announces the winner or tie.
+
+![The final game message which announces the winner or tie game.](assets/images/final-result.png)
+
