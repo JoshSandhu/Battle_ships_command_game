@@ -63,10 +63,10 @@ def welcome():
     name = input("Please enter your name followed by the enter button: \n")
     print(f'\nHi there {name}! '
           'The system will generate the loactions for your ships. '
-          'There will be 4 Battleships to find within the computers board')
+          'There will be 4 Battleships to find within the computers board.')
     print('\nX are marked as empty locations,'
           ' * are missed shots and the # are hits. '
-          'The grid is 5 spaces and they use integers between 1 and 5')
+          'The grid is 5 spaces and they use integers between 1 and 5.')
 
 
 def generate_boards():
@@ -111,19 +111,19 @@ def user_shot():
         guess_row = int(guess_row) - 1
 
         # Here we choose a response if the spot has already been chosen.
-        if (user_guess[guess_col][guess_row] == "*" or
-                user_guess[guess_col][guess_row] == "#"):
+        if (user_guess[guess_row][guess_col] == "*" or
+                user_guess[guess_row][guess_col] == "#"):
             print("Unfortunatly you have already chosen that spot, try again!")
         else:
             repeat = False
 
     # Now we check whether its a hit or not.
-    if computer[guess_col][guess_row] == "o":
-        user_guess[guess_col][guess_row] = "#"
+    if computer[guess_row][guess_col] == "o":
+        user_guess[guess_row][guess_col] = "#"
         print("\nBOOOOM!! You have hit the computers ship!")
     else:
-        user_guess[guess_col][guess_row] = "*"
-        print("\nAhhh you missed this turn. Try again next time :")
+        user_guess[guess_row][guess_col] = "*"
+        print("\nAhhh you missed this turn. Try again next time.")
 
 
 def comp_shot():
@@ -137,19 +137,19 @@ def comp_shot():
     guess_row = random_num(computer)
     # Check if the spot has been chosen
     while repeat:
-        if (user[guess_col][guess_row] == "*" or
-                user[guess_col][guess_row] == "#"):
+        if (user[guess_row][guess_col] == "*" or
+                user[guess_row][guess_col] == "#"):
             guess_col = random_num(computer)
             guess_row = random_num(computer)
         else:
             repeat = False
     # Show the user the computers move.
     print(f"The computer has chosen {guess_col + 1}, {guess_row + 1}")
-    if user[guess_col][guess_row] == "o":
-        user[guess_col][guess_row] = "#"
+    if user[guess_row][guess_col] == "o":
+        user[guess_row][guess_col] = "#"
         print("Ahhh that is a direct hit!")
     else:
-        user[guess_col][guess_row] = "*"
+        user[guess_row][guess_col] = "*"
         print("The computer has missed!!")
 
 
@@ -169,11 +169,11 @@ def game_start():
         print(f"You are currently on turn {i + 1}/10 \n")
         user_shot()
         print_board(user_guess)
-        input("\nPress Enter to continue . .")
+        input("\nPress Enter to see the computers turn.")
         comp_shot()
         print("\nThis is your board: ")
         print_board(user)
-        input("\nPress enter to continue . .")
+        input("\nPress enter for the next round of shots.")
         i += 1
         if check_result(user) == 4:
             i = 10
@@ -193,7 +193,7 @@ def validate_data(value):
                 "Your shot is out of bounds. Select a number between 1 and 5."
             )
     except ValueError as e:
-        print(f"Invalid data input: {e}, please try again.")
+        print(f"Invalid data input: {e} Please try again.")
         print("Enter a number between 1 and 5.")
         return False
     return True
