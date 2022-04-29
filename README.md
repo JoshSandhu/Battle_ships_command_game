@@ -29,4 +29,24 @@ The boards of each player have a key:
 
 ## Existing Features
 
-* 
+* User input to start the game allows for a user to enter their name or username to be referred to.
+
+![The command line request for user input](assets/images/player-entry-battleship.png)
+
+* The initial welcome message with instructions and key for the boards. 
+
+![Welcome message included with instructions](assets/images/instructions-battleship.png)
+
+* The computers board is shown to the player for them to make a guess.
+
+![The computers board as shown to the player - has hidden ships](assets/images/computers-board.png)
+
+* After the computer shows the board it will request the user to input a number between 1-5 for column.
+
+![The input request for column and row](assets/images/players-choice.png)
+
+* The results for the players shot is shown on the board with a message informing. 
+
+* Computer makes a random choice and then tells you both the choice and the results.
+
+![After the players guess we then get the result which is reflexted on board. The computer then goes.](assets/images/results-computershot.png)
